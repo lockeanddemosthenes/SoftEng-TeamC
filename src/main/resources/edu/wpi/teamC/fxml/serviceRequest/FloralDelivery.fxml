@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#validateButton" onMouseEntered="#validateButton" onMouseMoved="#mouseMoved" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.serviceRequest.FloralDeliveryController">
+    <children>
+        <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" />
+        <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="540.0" prefHeight="140.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <Label fx:id="floralRequestLabel" prefHeight="70.0" prefWidth="490.0" text="Floral Delivery Request" textAlignment="CENTER" textFill="#fffefe">
+                  <font>
+                      <Font size="48.0" />
+                  </font>
+              </Label>
+         </children>
+      </HBox>
+      <JFXButton fx:id="Emergency" buttonType="RAISED" layoutX="1101.0" layoutY="44.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@../style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Group layoutX="123.0" layoutY="19.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Brigham_and_Womens_Hospital_logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#goHome" prefHeight="128.0" prefWidth="112.0" styleClass="homeButton" stylesheets="@../style.css" />
+         </children>
+      </Group>
+      <HBox fx:id="hbox2" layoutX="540.0" layoutY="565.0" prefHeight="522.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text id="q3" fx:id="nameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of Recipient">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="patientName" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="39.0" prefWidth="229.0" promptText="Enter name here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text id="q3" fx:id="roomText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Recipient's Room">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTreeView fx:id="locationChooser" prefHeight="128.0" prefWidth="248.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text id="q3" fx:id="typeText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Type of Flowers">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <MenuButton fx:id="flowerChooser" mnemonicParsing="false" prefHeight="40.0" prefWidth="229.0" text="Choose flower type" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text id="q3" fx:id="numberText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Flowers">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="flowersNo" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="39.0" prefWidth="229.0" promptText="Enter number of flowers here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="backButton" buttonType="RAISED" onAction="#goServiceSystems" prefHeight="48.0" prefWidth="118.0" styleClass="footerButton" stylesheets="@../style.css" text="Back">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text id="q2" fx:id="noteText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Note (optional):">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="notesField" alignment="TOP_LEFT" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="274.0" prefWidth="498.0" promptText="Enter note here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text id="q2" fx:id="assignToText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign To:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <MenuButton fx:id="employeeChooser" mnemonicParsing="false" prefHeight="40.0" prefWidth="337.0" text="CHOOSE EMPLOYEE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="submitButton" buttonType="RAISED" onAction="#goSubmit" prefHeight="48.0" prefWidth="118.0" styleClass="footerButton" stylesheets="@../style.css" text="Submit">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#validateSubmit" onMouseEntered="#validateSubmit" onMouseMoved="#validateSubmit" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.LoginController">
+   <children>
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" />
+      <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="559.0" prefHeight="140.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="loginHeader" text="Login " textFill="#fffefe">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" layoutX="123.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@img/Brigham_and_Womens_Hospital_logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="logoButton" layoutX="123.0" layoutY="5.0" onAction="#goStartUp" prefHeight="128.0" prefWidth="110.0" AnchorPane.topAnchor="5.0" />
+      <HBox fx:id="hbox2" alignment="CENTER" layoutX="559.0" layoutY="580.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="Login" buttonType="RAISED" onAction="#goLogin" prefHeight="57.0" prefWidth="152.0" styleClass="footerButton" stylesheets="@style.css" text="Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <VBox fx:id="vbox" layoutY="278.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" spacing="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text id="q1" fx:id="userNameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <JFXTextField fx:id="userBox" focusColor="TRANSPARENT" onKeyPressed="#validateSubmit" prefHeight="35.0" prefWidth="209.0" promptText="Enter username here" styleClass="text-field" stylesheets="@style.css" unFocusColor="TRANSPARENT">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" spacing="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Text id="q1" fx:id="passwordText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <JFXPasswordField fx:id="passBox" focusColor="TRANSPARENT" onKeyPressed="#validateSubmit" prefHeight="39.0" prefWidth="209.0" promptText="Enter password here" styleClass="text-field" stylesheets="@style.css" unFocusColor="TRANSPARENT" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="emergency" buttonType="RAISED" layoutX="1101.0" layoutY="23.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="exit" buttonType="RAISED" layoutX="1101.0" layoutY="79.0" onAction="#exitApp" prefHeight="35.0" prefWidth="85.0" styleClass="logout" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

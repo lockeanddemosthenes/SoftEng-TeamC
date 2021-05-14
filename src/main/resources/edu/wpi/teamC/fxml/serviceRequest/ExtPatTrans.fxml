@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#validateButton" onMouseEntered="#validateButton" onMouseMoved="#mouseMoved" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.serviceRequest.ExtPatTransController">
+    <children>
+        <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" />
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="535.0" prefHeight="140.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <Label fx:id="extPatTransLabel" text="External Patient Transport" textFill="#fffefe">
+                  <font>
+                      <Font size="48.0" />
+                  </font>
+              </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="hbox2" alignment="CENTER" layoutX="535.0" layoutY="430.0" prefHeight="522.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text id="q3" fx:id="patNameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="patientName" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="39.0" prefWidth="229.0" promptText="Enter name here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                          <Text fx:id="locationText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                        <JFXTreeView fx:id="locationChooser" prefHeight="70.0" prefWidth="248.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                          <Text fx:id="addressText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                        <JFXTextField fx:id="address" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="39.0" prefWidth="229.0" promptText="Enter destination address here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text fx:id="townText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Town">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="town" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="40.0" prefWidth="229.0" promptText="Enter destination town here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text fx:id="stateText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="State">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="usState" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="39.0" prefWidth="229.0" promptText="Enter destination state initials here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                          <Text id="q3" fx:id="zipCodeText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                          <JFXTextField fx:id="zip" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="39.0" prefWidth="229.0" promptText="Enter zip code here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="backButton" buttonType="RAISED" onAction="#goServiceSystems" prefHeight="47.0" prefWidth="118.0" ripplerFill="WHITE" styleClass="footerButton" stylesheets="@../style.css" text="Back" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                          <Text fx:id="transportTypeText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Transport Type">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                          <MenuButton fx:id="transportTypes" mnemonicParsing="false" prefHeight="40.0" prefWidth="264.0" text="Choose transport type">
+                              <items>
+                                  <MenuItem fx:id="ambulance" mnemonicParsing="false" onAction="#onAmbulance" text="Ambulance" />
+                                  <MenuItem fx:id="helicopter" mnemonicParsing="false" onAction="#onHelicopter" text="Helicopter" />
+                                  <MenuItem fx:id="plane" mnemonicParsing="false" onAction="#onPlane" text="Plane" />
+                              </items>
+                          </MenuButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                     <children>
+                          <Text id="q3" fx:id="assignToText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign to: ">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                        <MenuButton fx:id="employeeChooser" mnemonicParsing="false" onAction="#chooseEmployeeOnAction" prefHeight="40.0" prefWidth="264.0" text="MenuButton" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXTimePicker fx:id="getTime" prefHeight="53.0" prefWidth="217.0" promptText="Select Time " style="-fx-background-color: WHITE;" styleClass="text-field" stylesheets="@../style.css" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXDatePicker fx:id="getDate" prefHeight="53.0" prefWidth="229.0" promptText="Select Day" styleClass="text-field" stylesheets="@../style.css" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                          <Text fx:id="reasonForTransportText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason for Transport">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXTextField fx:id="transportReason" alignment="TOP_LEFT" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="104.0" prefWidth="484.0" promptText="Enter reason here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="submitButton" buttonType="RAISED" onAction="#goSubmit" prefHeight="47.0" prefWidth="118.0" styleClass="footerButton" stylesheets="@../style.css" text="Submit" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+        <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <JFXButton fx:id="emergency" buttonType="RAISED" layoutX="1101.0" layoutY="44.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@../style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Group layoutX="123.0" layoutY="19.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Brigham_and_Womens_Hospital_logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#goHome" prefHeight="128.0" prefWidth="112.0" styleClass="homeButton" stylesheets="@../style.css" />
+         </children>
+      </Group>
+    </children>
+</AnchorPane>

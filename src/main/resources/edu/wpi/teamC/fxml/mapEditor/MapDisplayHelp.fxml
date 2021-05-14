@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.mapEditor.MapDisplayHelpController">
+   <children>
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="468.0" layoutY="-114.0" prefHeight="618.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="mapDisplayImg" fitHeight="618.0" fitWidth="1183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/MapDisplayGuest2.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Group fx:id="guestGroup" layoutX="14.0" layoutY="32.0" AnchorPane.topAnchor="7.8134765625">
+         <children>
+            <Line endX="161.89291381835938" endY="60.89289093017578" layoutX="204.0" layoutY="126.0" startX="191.0" startY="74.0" />
+            <Line endX="262.0" endY="-10.0" layoutX="254.0" layoutY="198.0" startX="288.0928955078125" startY="37.95954132080078" />
+            <Line endX="101.60000610351562" endY="225.0" layoutX="97.0" layoutY="265.0" startX="77.20001220703125" startY="190.60000610351562" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="41.0" layoutX="148.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+            <Text layoutX="160.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your selected start and end locations are displayed here" wrappingWidth="149.03985595703125" />
+            <Line endX="92.0" endY="154.6865234375" layoutX="148.0" layoutY="77.0" startX="111.86666107177734" startY="36.0" />
+            <Line endX="56.13334655761719" endY="-29.0" layoutX="266.0" layoutY="311.0" startX="46.0" startY="-50.86665344238281" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="23.0" layoutX="289.0" layoutY="282.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
+            <Text layoutX="297.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slide to zoom" wrappingWidth="73.490966796875" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="79.0" layoutX="148.0" layoutY="491.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Text layoutX="156.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can also select locations by using this legend. Expand a folder to select a location." textAlignment="CENTER" wrappingWidth="132.69097900390625" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="46.0" layoutX="334.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Text layoutX="339.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press to clear selections and restart navigation" textAlignment="CENTER" wrappingWidth="138.69097900390625" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="45.0" layoutX="533.0" layoutY="213.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Text layoutX="538.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select desired floor from this menu" textAlignment="CENTER" wrappingWidth="138.69097900390625" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="48.0" layoutX="770.0" layoutY="458.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Text layoutX="775.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Each node is color coded based on its type" textAlignment="CENTER" wrappingWidth="138.69097900390625" />
+            <Line endX="727.5" endY="372.0" layoutX="117.0" layoutY="86.0" startX="671.5" startY="255.1865234375" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="53.0" layoutX="194.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+            <Text layoutX="205.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The estimated distance and time to destination is displayed here" wrappingWidth="149.03985595703125" />
+            <Line endX="30.5999755859375" endY="-50.20001220703125" layoutX="194.0" layoutY="370.0" startX="85.51995849609375" startY="-1.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="57.0" layoutX="823.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+            <Text layoutX="835.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This button will call for emergency assistance to your location" wrappingWidth="149.03985595703125" />
+            <Line endX="209.199951171875" endY="-72.5999984741211" layoutX="819.0" layoutY="108.0" startX="161.20001220703125" startY="-65.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="42.0" layoutX="823.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+            <Text layoutX="833.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This button will bring you back to the home screen" wrappingWidth="153.83984375" />
+            <Line endX="209.199951171875" endY="-72.5999984741211" layoutX="819.0" layoutY="154.0" startX="162.0" startY="-49.19999694824219" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="66.0" layoutX="1033.0" layoutY="423.0" stroke="BLACK" strokeType="INSIDE" width="149.0" />
+            <Text layoutX="1038.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This button wil direct you back to your stored parking spot" textAlignment="CENTER" wrappingWidth="138.69097900390625" />
+            <Line endX="980.5" endY="390.0" layoutX="127.0" layoutY="96.0" startX="1005.0" startY="436.0" />
+         </children>
+      </Group>
+      <Group fx:id="adminGroup" layoutX="281.0" layoutY="146.0" visible="false" AnchorPane.topAnchor="73.8134765625">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="27.0" layoutX="545.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" width="114.0" />
+            <Text layoutX="552.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toggle Edit Mode" wrappingWidth="100.29095458984375" />
+            <Line endX="44.14544677734375" endY="-116.0" layoutX="558.0" layoutY="215.0" startX="95.73333740234375" startY="-128.59999084472656" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="44.0" layoutX="686.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+            <Text layoutX="692.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toggle displaying edges between nodes" textAlignment="CENTER" wrappingWidth="121.29095458984375" />
+            <Line endX="109.29998779296875" endY="-76.0" layoutX="644.0" layoutY="184.0" startX="124.4666748046875" startY="-97.26666259765625" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="45.0" layoutX="796.0" layoutY="153.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+            <Text layoutX="804.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Once selected nodes, click to align" textAlignment="CENTER" wrappingWidth="121.29095458984375" />
+            <Line endX="170.9000244140625" endY="-41.0" layoutX="687.0" layoutY="196.0" startX="199.5" startY="-119.3134765625" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="59.0" layoutX="314.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+            <Text layoutX="322.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select preferred pathfinding algorithm from menu" textAlignment="CENTER" wrappingWidth="121.29095458984375" />
+            <Line endX="-62.20001220703125" endY="-88.5" layoutX="444.0" layoutY="166.0" startX="-38.5" startY="-62.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="76.0" layoutX="46.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+            <Text layoutX="54.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecting a node in Edit Mode wil display this menu to edit node information." textAlignment="CENTER" wrappingWidth="121.29095458984375" />
+            <Line endX="31.20001220703125" endY="181.20001220703125" layoutX="108.0" layoutY="47.0" startX="9.20001220703125" startY="129.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="43.0" layoutX="108.0" layoutY="-46.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+            <Text layoutX="116.0" layoutY="-31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click Clear to leave a current tool" textAlignment="CENTER" wrappingWidth="121.29095458984375" />
+            <Line endX="46.20001220703125" endY="81.0" layoutX="69.0" layoutY="-83.0" startX="21.0" startY="128.1865234375" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="56.0" layoutX="641.0" layoutY="344.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+            <Text layoutX="649.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click to load edges and nodes from selected CSV files" textAlignment="CENTER" wrappingWidth="121.29095458984375" />
+            <Line endX="116.0" endY="129.6865234375" layoutX="660.0" layoutY="248.0" startX="163.5" startY="154.6865234375" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6be3c" height="56.0" layoutX="780.0" layoutY="272.0" stroke="BLACK" strokeType="INSIDE" width="134.0" />
+            <Text layoutX="788.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click to reset edges and nodes from preselected CSV files" textAlignment="CENTER" wrappingWidth="121.29095458984375" />
+            <Line endX="62.0" endY="152.0" layoutX="799.0" layoutY="176.0" startX="84.0" startY="170.6865234375" />
+         </children>
+      </Group>
+      <JFXButton fx:id="backButton" layoutX="1075.0" layoutY="638.0" onAction="#backButtonPressed" style="-fx-background-color: #012d5a;" text="Back" textFill="WHITE" AnchorPane.bottomAnchor="15.0" />
+      <JFXToggleButton fx:id="guestToggle" layoutX="175.0" layoutY="623.0" onAction="#guestToggled" prefHeight="60.0" prefWidth="187.0" text="Guest Mode" toggleColor="#f6be3c" toggleLineColor="#f6be3c" AnchorPane.bottomAnchor="1.0" />
+      <Text layoutX="484.0" layoutY="649.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Right click on a node to select as a start or destination. Once both are selected, step-by-step directions will appear." textAlignment="CENTER" wrappingWidth="496.94635009765625" AnchorPane.bottomAnchor="11.2841796875" />
+      <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" AnchorPane.bottomAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

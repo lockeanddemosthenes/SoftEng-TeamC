@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#mouseMoved" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.mapEditor.EdgeController">
+  <children>
+    <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" layoutX="123.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../img/Brigham_and_Womens_Hospital_logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="emergency" buttonType="RAISED" layoutX="1101.0" layoutY="44.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: #f80000;" styleClass="emergency" stylesheets="@../style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="539.0" layoutY="20.0" prefHeight="140.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Edges" wrappingWidth="132.89599609375">
+            <font>
+              <Font size="48.0" />
+            </font>
+          </Text>
+         </children>
+      </HBox>
+      <HBox fx:id="hbox2" alignment="CENTER" layoutX="248.0" layoutY="227.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+          <TreeTableView fx:id="edgeTreeTableView" prefHeight="294.0" prefWidth="785.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbox3" alignment="CENTER" layoutY="518.0" prefHeight="100.0" prefWidth="1280.0" spacing="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#resetCSV" prefWidth="135.0" style="-fx-background-color: #f6be3c;" styleClass="footerButton" stylesheets="@../style.css" text="Reset" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#addEdge" prefWidth="135.0" style="-fx-background-color: #f6be3c;" styleClass="footerButton" stylesheets="@../style.css" text="Add Edge" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#editEdge" prefWidth="135.0" style="-fx-background-color: #f6be3c;" styleClass="footerButton" stylesheets="@../style.css" text="Edit Edge" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#removeEdge" prefWidth="135.0" style="-fx-background-color: #f6be3c;" styleClass="footerButton" stylesheets="@../style.css" text="Remove Edge" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#importCSV" prefWidth="135.0" style="-fx-background-color: #f6be3c;" styleClass="footerButton" stylesheets="@../style.css" text="Import CSV" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#save" prefWidth="135.0" style="-fx-background-color: #f6be3c;" styleClass="footerButton" stylesheets="@../style.css" text="Save" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox fx:id="hbox4" alignment="CENTER" layoutX="563.0" layoutY="599.0" prefHeight="82.0" prefWidth="1280.0" spacing="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#goHome" prefHeight="40.0" prefWidth="118.0" ripplerFill="WHITE" styleClass="whiteButton" stylesheets="@../style.css" text="HOME" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#goHome" prefHeight="40.0" prefWidth="118.0" ripplerFill="#6048d3" styleClass="whiteButton" stylesheets="@../style.css" text="HELP" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE">
+          <font>
+              <Font size="24.0" />
+          </font>
+      </Label>
+  </children>
+</AnchorPane>

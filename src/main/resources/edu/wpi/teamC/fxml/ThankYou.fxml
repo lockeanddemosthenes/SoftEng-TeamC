@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.ThankYouController">
+   <children>
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutX="1.0" layoutY="159.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" />
+      <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" layoutX="123.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@img/Brigham_and_Womens_Hospital_logo.png" />
+         </image>
+      </ImageView>
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="540.0" prefHeight="140.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="formHeader" text="Form Submitted" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <JFXButton fx:id="Emergency" buttonType="RAISED" layoutX="1101.0" layoutY="23.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="logOut" buttonType="RAISED" layoutX="1101.0" layoutY="79.0" onAction="#logOut" prefHeight="35.0" prefWidth="85.0" styleClass="logout" stylesheets="@style.css" text="Log Out" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <HBox alignment="CENTER" layoutY="158.0" prefHeight="522.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fx:id="pic" fitHeight="522.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/hands.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox fx:id="vbox" alignment="CENTER" layoutX="590.0" layoutY="271.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text id="q1" fx:id="formPara" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you for submitting your form. It is now being processed." wrappingWidth="579.7734375">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <HBox fx:id="hbox2" alignment="CENTER" layoutX="540.0" layoutY="580.0" prefHeight="100.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="homeButton" buttonType="RAISED" onAction="#goHome" prefHeight="46.0" prefWidth="93.0" styleClass="footerButton" stylesheets="@style.css" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXButton layoutX="123.0" layoutY="5.0" onAction="#goHome" prefHeight="128.0" prefWidth="110.0" styleClass="homeButton" stylesheets="@style.css" AnchorPane.topAnchor="5.0" />
+      <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

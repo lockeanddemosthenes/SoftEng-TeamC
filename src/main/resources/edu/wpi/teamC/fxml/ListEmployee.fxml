@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.ListEmployeeController">
+   <children>
+      <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis></Rectangle>
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <JFXTreeTableView fx:id="employeeJFXTreeTableView" layoutX="266.0" layoutY="215.0" prefHeight="280.0" prefWidth="744.0" />
+      <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="538.0" prefHeight="140.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="employeesHeader" prefHeight="70.0" prefWidth="235.0" text="Employees" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <JFXButton layoutX="123.0" layoutY="5.0" onAction="#goHome" prefHeight="128.0" prefWidth="112.0" styleClass="homeButton" stylesheets="@style.css" text=" " AnchorPane.topAnchor="5.0">
+      </JFXButton>
+      <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" layoutX="123.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@img/Brigham_and_Womens_Hospital_logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="emergency" buttonType="RAISED" layoutX="1101.0" layoutY="23.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@style.css" text="Emergency" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="logOut" buttonType="RAISED" layoutX="1101.0" layoutY="79.0" onAction="#logOut" prefHeight="35.0" prefWidth="85.0" styleClass="logout" stylesheets="@style.css" text="Log Out" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <HBox fx:id="hbox2" alignment="CENTER" layoutX="541.0" layoutY="498.0" prefHeight="100.0" prefWidth="1280.0" spacing="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="removeEmployee" buttonType="RAISED" onAction="#goRemove" prefHeight="39.0" prefWidth="85.0" styleClass="tableButton" stylesheets="@style.css" text="Remove">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="addEmployee" buttonType="RAISED" onAction="#goAddEmployee" prefHeight="35.0" prefWidth="85.0" styleClass="tableButton" stylesheets="@style.css" text="Add">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="accessEmployee" buttonType="RAISED" onAction="#goAccessEmployee" prefHeight="35.0" prefWidth="85.0" styleClass="tableButton" stylesheets="@style.css" text="Edit">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox fx:id="hbox3" alignment="CENTER" layoutX="1.0" layoutY="584.0" prefHeight="100.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="back" buttonType="RAISED" onAction="#goBack" prefHeight="35.0" prefWidth="85.0" styleClass="footerButton" stylesheets="@style.css" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

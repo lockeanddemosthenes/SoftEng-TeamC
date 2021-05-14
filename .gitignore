@@ -1,0 +1,11 @@
+derby.log
+build/
+.gradle/
+.idea/
+buildOutputCleanup.lock
+executionHistory.bin
+executionHistory.lock
+fileHashes.bin
+fileHashes.lock
+javaCompile.lock
+taskHistory.bin

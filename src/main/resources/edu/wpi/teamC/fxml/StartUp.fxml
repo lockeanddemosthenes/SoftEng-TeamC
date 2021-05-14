@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.StartUpController">
+   <children>
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="158.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" layoutX="547.0" layoutY="350.0" prefHeight="522.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fx:id="pic" fitHeight="522.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/DoctorsWide.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <HBox fx:id="hbox1" alignment="CENTER" prefHeight="140.0" prefWidth="1280.0" spacing="160.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="welcome" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Brigham and Women's Hospital" textAlignment="CENTER" wrappingWidth="707.0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <JFXButton fx:id="emergency" buttonType="RAISED" layoutX="1101.0" layoutY="23.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="exit" buttonType="RAISED" layoutX="1101.0" layoutY="79.0" onAction="#exitApp" prefHeight="35.0" prefWidth="85.0" styleClass="logout" stylesheets="@style.css" text="Exit" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" layoutX="123.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@img/Brigham_and_Womens_Hospital_logo.png" />
+         </image>
+      </ImageView>
+      <HBox fx:id="hbox2" alignment="CENTER" layoutX="7.0" layoutY="310.0" prefHeight="61.0" prefWidth="1280.0" spacing="70.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0">
+         <children>
+            <JFXButton fx:id="login" buttonType="RAISED" onAction="#LogIn" prefHeight="61.0" prefWidth="287.0" styleClass="whiteButton" stylesheets="@style.css" text="Log In">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="guest" buttonType="RAISED" onAction="#goGuest" prefHeight="61.0" prefWidth="287.0" styleClass="whiteButton" stylesheets="@style.css" text="Guest">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox fx:id="hbox3" alignment="CENTER" layoutY="419.0" prefHeight="84.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox fx:id="vbox" prefHeight="84.0" prefWidth="165.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="signup" onAction="#goSignUp" prefHeight="35.0" prefWidth="164.0" styleClass="logout" stylesheets="@style.css" text="New Patient? Click Here " textFill="WHITE" />
+                  <HBox prefHeight="35.0" prefWidth="165.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="aboutus" onAction="#goAbout" prefHeight="35.0" prefWidth="82.0" styleClass="logout" stylesheets="@style.css" text="About Us" textFill="WHITE" />
+                        <JFXButton fx:id="credits" onAction="#goCredits" prefHeight="35.0" prefWidth="82.0" styleClass="logout" stylesheets="@style.css" text="Credits" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox fx:id="hbox4" layoutY="604.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXComboBox fx:id="languageDropDown" onAction="#languageSelected" prefHeight="45.0" prefWidth="140.0" promptText="Language" style="-fx-background-color: WHITE;" stylesheets="@style.css">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXComboBox>
+         </children>
+      </HBox>
+      <HBox fx:id="hboxx" alignment="CENTER" layoutY="175.0" prefHeight="100.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fx:id="temp" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="description" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

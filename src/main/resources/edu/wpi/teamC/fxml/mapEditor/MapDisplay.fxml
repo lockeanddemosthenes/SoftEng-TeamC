@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import net.kurobako.gesturefx.GesturePane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.mapEditor.MapDisplay">
+    <GesturePane fx:id="zoomPane" layoutX="258.0" layoutY="176.0" onZoom="#mouseZoom" prefHeight="504.0" prefWidth="1022.0" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="48.0" layoutX="13.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" width="201.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="218.0" />
+    <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+    <Text fx:id="startNodeId" layoutX="94.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start node" wrappingWidth="106.35353088378906" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="225.0" />
+    <Text fx:id="mainText" layoutX="9.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click two nodes to begin navigation" wrappingWidth="332.81250190734863" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="139.576171875">
+      <font>
+         <Font size="18.0" />
+      </font></Text>
+    <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="301.0" layoutY="183.0" onAction="#clearButtonPressed" styleClass="mapButton" stylesheets="@../style.css" text="Clear" textFill="WHITE" AnchorPane.rightAnchor="914.0">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </JFXButton>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="39.0" layoutX="386.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" width="171.0" AnchorPane.rightAnchor="723.0" />
+    <JFXComboBox fx:id="listFloor" focusColor="TRANSPARENT" layoutX="487.0" layoutY="182.0" onAction="#comboBoxPressed" prefHeight="39.0" prefWidth="65.0" unFocusColor="TRANSPARENT" AnchorPane.rightAnchor="728.0" />
+    <Group fx:id="adminGroup" layoutX="1050.0" layoutY="183.0" AnchorPane.rightAnchor="-11.0" AnchorPane.topAnchor="169.0">
+      <children>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="48.0" layoutX="-240.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="455.0" />
+         <JFXToggleButton fx:id="isShowEdges" layoutX="1.0" layoutY="-14.0" onAction="#showEdgesUpdate" prefHeight="74.0" prefWidth="154.0" text="Show Edges" textFill="WHITE" toggleColor="#f6be3c" toggleLineColor="#f6be3c" wrapText="true" />
+          <JFXButton fx:id="alignSelection" layoutX="148.0" layoutY="-2.0" onAction="#alignSelection" prefHeight="51.0" prefWidth="67.0" text="Align" textFill="WHITE" wrapText="true" />
+         <JFXToggleButton fx:id="isEmergencyButton" layoutX="-250.0" layoutY="-9.0" onAction="#isEmergencyChanged" prefHeight="65.0" prefWidth="147.0" text="Emergency" textFill="WHITE" wrapText="true" />
+          <JFXToggleButton fx:id="isEditMode" layoutX="-118.0" layoutY="-7.0" onAction="#editModeUpdate" prefHeight="60.0" prefWidth="139.0" text="Edit Mode" textFill="WHITE" toggleColor="#f5bb40" toggleLineColor="#f6be3c" wrapText="true" />
+         <JFXButton fx:id="loadCSVButton" layoutX="108.0" layoutY="371.0" onAction="#loadCSV" prefHeight="37.0" prefWidth="118.0" styleClass="mapButton" stylesheets="@../style.css" text="Load CSV" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </JFXButton>
+         <JFXButton fx:id="resetCSVButton" layoutX="108.0" layoutY="332.0" onAction="#resetCSV" prefHeight="38.0" prefWidth="117.0" styleClass="mapButton" stylesheets="@../style.css" text="Reset CSV" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </JFXButton>
+      </children>
+    </Group>
+    <JFXSlider fx:id="zoomAmount" layoutX="208.0" layoutY="267.0" onMouseDragged="#zoomMap" rotate="270.0" value="1.0" AnchorPane.leftAnchor="208.0" />
+    <JFXTreeView fx:id="legendTable" layoutX="13.0" layoutY="393.0" prefHeight="272.0" prefWidth="201.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="393.0" />
+
+          <Group fx:id="editNodeMenuGroup" layoutX="225.0" layoutY="350.0" AnchorPane.bottomAnchor="12.0">
+      <children>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
+            <Text fx:id="editNodeTitle" layoutX="15.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Node:">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Text>
+            <JFXTextField fx:id="editNodeX" layoutX="30.0" layoutY="21.0" prefHeight="25.0" prefWidth="42.0" />
+            <Text layoutX="17.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X:" />
+            <JFXTextField fx:id="editNodeY" layoutX="104.0" layoutY="21.0" prefHeight="25.0" prefWidth="42.0" />
+            <Text layoutX="89.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y:" />
+            <Text fx:id="editFloorText" layoutX="150.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Floor:" wrappingWidth="52.001953125" />
+            <Text fx:id="editShortNameText" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Short Name:" wrappingWidth="128.52197265625" />
+            <JFXTextField fx:id="editNodeShortName" layoutX="131.0" layoutY="88.0" prefHeight="25.0" prefWidth="111.0" />
+            <Text fx:id="editLongNameText" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Long Name:" wrappingWidth="120.14892578125" />
+            <JFXTextField fx:id="editNodeLongName" layoutX="131.0" layoutY="114.0" prefHeight="25.0" prefWidth="111.0" />
+            <JFXButton fx:id="editNodeSaveButton" buttonType="RAISED" layoutX="28.0" layoutY="212.0" onAction="#editSaveButtonPressed" styleClass="mapButton" stylesheets="@../style.css" text="Save" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </JFXButton>
+         <JFXTextField fx:id="editNodeBuilding" layoutX="82.0" layoutY="54.0" prefHeight="25.0" prefWidth="65.0" />
+         <Text fx:id="editBuildingText" layoutX="1.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Building:" wrappingWidth="82.392578125" />
+         <JFXTextField fx:id="editNodeType" layoutX="204.0" layoutY="54.0" prefHeight="25.0" prefWidth="42.0" />
+         <Text fx:id="editTypeText" layoutX="148.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" wrappingWidth="53.03173828125" />
+         <JFXComboBox fx:id="editFloorMenu" layoutX="200.0" layoutY="20.0" prefHeight="25.0" prefWidth="43.0" />
+         <JFXTextField fx:id="editNodeID" layoutX="86.0" layoutY="159.0" prefHeight="25.0" prefWidth="111.0" />
+         <Text fx:id="editNodeIDText" layoutX="26.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Node ID:" wrappingWidth="58.55712890625" />
+         <JFXButton fx:id="editNodeAddButton" buttonType="RAISED" layoutX="176.0" layoutY="212.0" onAction="#editAddButtonPressed" styleClass="mapButton" stylesheets="@../style.css" text="Add" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </JFXButton>
+      </children></Group>
+
+   <Group fx:id="directionsGroup" layoutX="1.0" layoutY="-48.0" AnchorPane.bottomAnchor="-10.0">
+           <children>
+               <Rectangle fx:id="textDirectionBox" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="142.0" layoutX="471.0" layoutY="586.0" stroke="BLACK" strokeType="INSIDE" width="539.0" />
+               <JFXButton fx:id="nextDirectionButton" buttonType="RAISED" layoutX="882.0" layoutY="588.0" onAction="#nextDirectionPressed" prefHeight="39.0" prefWidth="116.0" styleClass="mapButton" stylesheets="@../style.css" text="Next" textFill="WHITE">
+                   <font>
+                       <Font size="18.0" />
+                   </font>
+               </JFXButton>
+               <Text fx:id="textDirection" layoutX="485.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEXT DIRECTIONS" wrappingWidth="397.0361328125">
+                   <font>
+                       <Font size="14.0" />
+                   </font>
+               </Text>
+         <JFXButton fx:id="sendDirectionsButton" buttonType="RAISED" layoutX="499.0" layoutY="656.0" onAction="#sendDirections" prefHeight="63.0" prefWidth="173.0" styleClass="mapButton" stylesheets="@../style.css" text="Email Directions" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </JFXButton>
+         <JFXTextField fx:id="emailField" focusColor="#ffffff00" layoutX="734.0" layoutY="682.0" prefHeight="25.0" prefWidth="254.0" promptText="Enter email" />
+         <JFXButton fx:id="restartDirectionButton" buttonType="RAISED" layoutX="882.0" layoutY="628.0" onAction="#restartDirections" prefHeight="39.0" prefWidth="116.0" styleClass="mapButton" stylesheets="@../style.css" text="Restart" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </JFXButton>
+           </children>
+    </Group>
+    <Rectangle fx:id="pathSelectRect" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="39.0" layoutX="575.0" layoutY="183.0" stroke="BLACK" strokeType="INSIDE" width="145.0" AnchorPane.rightAnchor="560.0" />
+    <JFXComboBox fx:id="listNavType" focusColor="TRANSPARENT" layoutX="578.0" layoutY="183.0" onAction="#pathSelectPressed" prefHeight="37.0" prefWidth="139.0" promptText="Algorithm" unFocusColor="TRANSPARENT" AnchorPane.rightAnchor="563.0" />
+    <Text fx:id="currentFloorText" layoutX="386.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Floor:" wrappingWidth="104.59718392334253" AnchorPane.rightAnchor="789.4028160766575" />
+   <Text fx:id="startNodeText" layoutX="16.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Node: " AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="225.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="48.0" layoutX="13.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" width="201.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="276.0" />
+   <Text fx:id="endNodeText" layoutX="16.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Node: " AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="281.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+    <Text fx:id="endNodeId" layoutX="94.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End node" wrappingWidth="106.35353088378906" AnchorPane.leftAnchor="94.0" AnchorPane.topAnchor="281.0" />
+    <Group fx:id="zoomObjects" layoutX="1000.0" layoutY="800.0">
+        <children>
+            <Group fx:id="lineGroup" />
+            <Group fx:id="buttonGroup" />
+            <Group fx:id="edgeGroup" />
+            <ImageView fx:id="mapImg" fitHeight="479.0" fitWidth="732.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../img/L1.png" />
+            </ImageView>
+         <Group fx:id="startGroup" />
+            <Group fx:id="endGroup" />
+        </children>
+    </Group>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="58.0" layoutX="13.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="201.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="331.0" />
+    <Text fx:id="estimatedDistanceText" layoutX="20.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estimated Distance: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="336.0" />
+
+    <Text fx:id="estimatedTimeText" layoutX="20.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estimated Time:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="360.0" />
+    <Text fx:id="timeText" layoutX="163.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0:00" AnchorPane.leftAnchor="167.0" AnchorPane.topAnchor="360.0" />
+    <Text fx:id="distText" layoutX="167.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0ft" AnchorPane.leftAnchor="167.0" AnchorPane.topAnchor="336.0" />
+   <JFXButton fx:id="helpButton" layoutX="1174.0" layoutY="632.0" onAction="#helpButtonPressed" prefHeight="39.0" prefWidth="91.0" styleClass="mapButton" stylesheets="@../style.css" text="Help" textFill="WHITE" wrapText="true" AnchorPane.rightAnchor="5.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </JFXButton>
+   <JFXButton fx:id="parkButton" layoutX="1081.0" layoutY="592.0" onAction="#toParking" prefHeight="39.0" prefWidth="194.0" styleClass="mapButton" stylesheets="@../style.css" text="Back to Parking Spot" textFill="WHITE" wrapText="true" AnchorPane.rightAnchor="5.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </JFXButton>
+   <JFXButton layoutX="123.0" layoutY="19.0" onAction="#goHome" prefHeight="128.0" prefWidth="112.0" styleClass="homeButton" stylesheets="@../style.css" AnchorPane.topAnchor="0.0" />
+    <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" layoutX="123.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+        <image>
+            <Image url="@../img/Brigham_and_Womens_Hospital_logo.png" />
+        </image>
+    </ImageView>
+   <HBox fx:id="hbox1" alignment="CENTER" layoutX="548.0" prefHeight="140.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+          <Text fx:id="navigationText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Navigation">
+              <font>
+                  <Font size="48.0" />
+              </font>
+          </Text>
+      </children>
+   </HBox>
+    <JFXButton fx:id="emergencyButton" buttonType="RAISED" layoutX="1101.0" layoutY="44.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@../style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </JFXButton>
+    <JFXButton fx:id="homeButton" buttonType="RAISED" layoutX="1101.0" layoutY="79.0" onAction="#goHome" prefHeight="35.0" prefWidth="85.0" styleClass="logout" stylesheets="@../style.css" text="Home" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="79.0">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </JFXButton>
+    <Label fx:id="timerLabel" layoutX="1035.0" layoutY="648.0" prefHeight="35.0" prefWidth="133.0">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+</AnchorPane>

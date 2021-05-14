@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#validateButton" onMouseEntered="#validateButton" onMouseMoved="#mouseMoved" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.serviceRequest.SanitationController">
+    <children>
+        <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" />
+        <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <VBox fx:id="vbox" layoutY="166.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+               <children>
+                  <Text fx:id="requestAreaText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Requested Area" wrappingWidth="200.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <JFXTreeView fx:id="locationChooser" prefHeight="103.0" prefWidth="248.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+               <children>
+                  <Text id="q1" fx:id="assignToText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign To" wrappingWidth="200.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <MenuButton fx:id="employeeChooser" mnemonicParsing="false" prefHeight="40.0" prefWidth="215.0" text="Choose employee" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefWidth="1280.0" spacing="20.0">
+               <children>
+                    <Text id="q3" fx:id="descriptionText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Description of Cleaning Needed">
+                        <font>
+                            <Font size="24.0" />
+                        </font>
+                    </Text>
+                  <JFXTextField fx:id="desc" alignment="TOP_LEFT" focusColor="TRANSPARENT" onKeyTyped="#keyTyped" prefHeight="134.0" prefWidth="946.0" promptText="Enter description here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT">
+                     <VBox.margin>
+                        <Insets left="250.0" right="250.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+        <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <HBox fx:id="hbox1" alignment="CENTER" layoutX="540.0" prefHeight="140.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <Label fx:id="sanitationRequestText" text="Sanitation Service Request" textFill="#fffefe">
+                  <font>
+                      <Font size="42.0" />
+                  </font>
+              </Label>
+         </children>
+      </HBox>
+      <JFXButton fx:id="emergency" buttonType="RAISED" layoutX="1101.0" layoutY="44.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@../style.css" text="Emergency" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <HBox fx:id="hbox2" alignment="CENTER" layoutX="540.0" layoutY="580.0" prefHeight="100.0" prefWidth="1280.0" spacing="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="backButton" onAction="#goServiceSystems" prefHeight="48.0" prefWidth="118.0" styleClass="footerButton" stylesheets="@../style.css" text="Back">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="submitButton" onAction="#goSubmit" prefHeight="48.0" prefWidth="118.0" styleClass="footerButton" stylesheets="@../style.css" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Group layoutX="123.0" layoutY="19.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Brigham_and_Womens_Hospital_logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#goHome" prefHeight="128.0" prefWidth="112.0" styleClass="homeButton" stylesheets="@../style.css" />
+         </children>
+      </Group>
+    </children>
+</AnchorPane>

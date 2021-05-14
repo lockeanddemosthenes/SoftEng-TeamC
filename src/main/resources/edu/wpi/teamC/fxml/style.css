@@ -1,0 +1,195 @@
+.text-field {
+    -fx-background-color: WHITE;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 3;
+    -fx-border-width: 7;
+}
+
+.emergency {
+    -fx-background-color: #F80000;
+    -fx-background-radius: 30px;
+    -jfx-rippler-fill: BLACK;
+    -fx-font-size: 12px;
+    -fx-font-weight: BOLD;
+    -fx-text-fill: WHITE;
+    -fx-text-alignment: CENTER;
+    -jfx-button-type: RAISED;
+    -fx-cursor: HAND;
+}
+
+.emergency:hover {
+    -fx-background-color: #cf0000;
+}
+
+.logout {
+    -fx-background-color: #f6be3c;
+    -fx-background-radius: 30px;
+    -jfx-rippler-fill: BLACK;
+    -fx-font-size: 12px;
+    -fx-font-weight: BOLD;
+    -fx-text-fill: WHITE;
+    -fx-text-alignment: CENTER;
+    -jfx-button-type: RAISED;
+    -fx-cursor: HAND;
+}
+
+.logout:hover {
+    -fx-background-color: #d9a429;
+}
+
+.tableButton {
+    -fx-background-color: #f6be3c;
+    -fx-background-radius: 30px;
+    -jfx-rippler-fill: BLACK;
+    -fx-font-size: 14px;
+    -fx-font-weight: BOLD;
+    -fx-text-fill: WHITE;
+    -fx-text-alignment: CENTER;
+    -jfx-button-type: RAISED;
+    -fx-cursor: HAND;
+}
+
+.tableButton:hover {
+    -fx-background-color: #d9a429;
+}
+
+.footerButton {
+    -fx-background-color: #f6be3c;
+    -fx-background-radius: 30px;
+    -jfx-rippler-fill: BLACK;
+    -fx-font-size: 18px;
+    -fx-font-weight: REGULAR;
+    -fx-text-fill: BLACK;
+    -fx-text-alignment: CENTER;
+    -jfx-button-type: RAISED;
+    -fx-border-radius: 5px;
+    -fx-cursor: HAND;
+}
+
+.footerButton:hover {
+    -fx-background-color: #d9a429;
+}
+
+.homeButton {
+    -jfx-rippler-fill: BLACK;
+    -fx-text-fill: TRANSPARENT;
+    -fx-cursor: HAND;
+}
+
+.whiteButton {
+    -fx-background-color: WHITE;
+    -fx-background-radius: 30px;
+    -jfx-rippler-fill: BLACK;
+    -fx-font-size: 18px;
+    -fx-font-weight: REGULAR;
+    -fx-text-fill: BLACK;
+    -fx-text-alignment: CENTER;
+    -jfx-button-type: RAISED;
+    -fx-cursor: HAND;
+}
+
+.whiteButton:hover {
+    -fx-background-color: #c7c7c7;
+}
+
+.mapButton {
+    -fx-background-color: #012d5a;
+    -fx-background-radius: 30px;
+    -jfx-rippler-fill: BLACK;
+    -fx-text-fill: WHITE;
+    -fx-text-alignment: CENTER;
+    -jfx-button-type: RAISED;
+    -fx-cursor: HAND;
+}
+
+.mapButton:hover {
+    -fx-background-color: #021b36;
+}
+
+.serviceButton {
+    -fx-background-color: WHITE;
+    -fx-background-radius: 30px;
+    -jfx-rippler-fill: BLACK;
+    -fx-font-size: 17px;
+    -fx-font-weight: REGULAR;
+    -fx-text-fill: BLACK;
+    -fx-text-alignment: CENTER;
+    -jfx-button-type: RAISED;
+    -fx-cursor: HAND;
+}
+
+#configButton {
+    -fx-graphic: url("img/ConfigIcon.png");
+}
+
+#counselingButton {
+    -fx-graphic: url("img/CounselingIcon.png");
+}
+
+#covidSurveyButton {
+    -fx-graphic: url("img/CovidIcon.png");
+}
+
+#edgesButton {
+    -fx-graphic: url("img/EdgeIcon.png");
+}
+
+#employeesButton {
+    -fx-graphic: url("img/EmployeeIcon.png");
+}
+
+#externalButton {
+    -fx-graphic: url("img/ExtPatIcon.png");
+}
+
+#floralButton {
+    -fx-graphic: url("img/FloralIcon.png");
+}
+
+#foodButton {
+    -fx-graphic: url("img/FoodIcon.png");
+}
+
+#interpreterButton {
+    -fx-graphic: url("img/InterpreterIcon.png");
+}
+
+#internalButton {
+    -fx-graphic: url("img/IntPatIcon.png");
+}
+
+#maintenanceButton {
+    -fx-graphic: url("img/MaintenanceIcon.png");
+}
+
+#mapButton {
+    -fx-graphic: url("img/MapIcon.png");
+}
+
+#medicineButton {
+    -fx-graphic: url("img/MedicineIcon.png");
+}
+
+#nodesButton {
+    -fx-graphic: url("img/NodeIcon.png");
+}
+
+#sanitationButton {
+    -fx-graphic: url("img/SanitationIcon.png");
+}
+
+#serviceReqButton {
+    -fx-graphic: url("img/ServiceIcon.png");
+}
+
+#ticketsButton {
+    -fx-graphic: url("img/TicketIcon.png");
+}
+
+.serviceButton:hover {
+    -fx-background-color: #c7c7c7;
+}
+
+.hyperlink:visited {
+    -fx-text-fill: #0095C8;
+}

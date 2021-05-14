@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.AboutPageController">
+   <children>
+      <JFXButton layoutX="90.0" layoutY="1.0" onAction="#goHome" prefHeight="164.0" prefWidth="151.0" AnchorPane.topAnchor="5.0" />
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="535.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.bottomAnchor="0.0" />
+      <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="169.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="creditsHeader" layoutX="317.0" layoutY="61.0" text="About Us " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Text id="q1" fx:id="creditsInfo" fill="WHITE" layoutX="600.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A special thanks to Brigham &amp; Women's Hospital, especially Andrew Shinn, for your generous time and input. &#10;&#10;The Brigham &amp; Women’s Hospital maps and data used in this application are copyrighted and provided for the sole use of educational purposes." wrappingWidth="444.9768981933594">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="bwh" fitHeight="161.0" fitWidth="142.0" layoutX="98.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@img/Brigham_and_Womens_Hospital_logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="Emergency" buttonType="RAISED" layoutX="1101.0" layoutY="44.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="home" buttonType="RAISED" layoutX="1101.0" layoutY="104.0" onAction="#goHome" prefHeight="35.0" prefWidth="85.0" styleClass="logout" stylesheets="@style.css" text="Home" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Group layoutX="860.0" layoutY="540.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/alex.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="alexText" fill="WHITE" layoutX="157.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alex Strickland">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="alexTitle" fill="WHITE" layoutX="159.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Owner &amp; Algorithms" wrappingWidth="169.802978515625">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutX="20.0" layoutY="370.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/nigel.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="nigelText" fill="WHITE" layoutX="120.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nigel Kobayashi">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="nigelTitle" fill="WHITE" layoutX="121.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Documentation &amp; Algorithms" wrappingWidth="169.80294799804688">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutX="860.0" layoutY="370.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="7.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/toby.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="tobyText" fill="WHITE" layoutX="117.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toby Schaeffer">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="tobyTitle" fill="WHITE" layoutX="121.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assistant Lead Software Developer &amp; Algorithms" wrappingWidth="211.71603393554688">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutX="440.0" layoutY="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/errica.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="erricaText" fill="WHITE" layoutX="156.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Errica Cheng">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="erricaTitle" fill="WHITE" layoutX="158.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Manager &amp; UI+Graphics" wrappingWidth="182.69924926757812">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutX="860.0" layoutY="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/carlie.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="carlieText" fill="WHITE" layoutX="128.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carlie Flanagan">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="carlieTitle" fill="WHITE" layoutX="130.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assistant Lead Software Developer &amp; Backend Database" wrappingWidth="237.1641845703125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutX="440.0" layoutY="540.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/hayden.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="haydenText" fill="WHITE" layoutX="157.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hayden Smith">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="haydenTitle" fill="WHITE" layoutX="157.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lead Software Developer &amp; Backend Database" wrappingWidth="243.95684814453125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Group layoutX="53.0" layoutY="-35.0" />
+         </children>
+      </Group>
+      <Group layoutX="440.0" layoutY="370.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="7.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/nate.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="nathanText" fill="WHITE" layoutX="128.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nathan Kumar">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="nathanTitle" fill="WHITE" layoutX="130.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Backend Database &amp; UI+Graphics" wrappingWidth="203.65582275390625">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Group layoutX="20.0" layoutY="540.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+            <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/dylan.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="dylanText" fill="WHITE" layoutX="107.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dylan Shanes">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="dylanTitle" fill="WHITE" layoutX="109.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UI+Graphics" wrappingWidth="169.802978515625">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <JFXButton layoutX="90.0" layoutY="1.0" onAction="#goHome" prefHeight="164.0" prefWidth="151.0" AnchorPane.topAnchor="5.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="159.0" layoutX="20.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+      <ImageView fitHeight="149.0" fitWidth="143.0" layoutX="31.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Mary.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="maryTitle" fill="WHITE" layoutX="161.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scrum Master &amp; UI+Graphics" wrappingWidth="158.51864624023438">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="maryText" fill="WHITE" layoutX="162.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mary Braen">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

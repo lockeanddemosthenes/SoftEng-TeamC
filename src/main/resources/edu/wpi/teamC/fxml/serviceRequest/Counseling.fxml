@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#validateButton" onMouseEntered="#validateButton" onMouseMoved="#mouseMoved" prefHeight="680.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.teamC.views.serviceRequest.CounselingController">
+    <children>
+        <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="522.0" layoutY="188.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="158.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012d5a" height="140.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1280.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton fx:id="emergency" buttonType="RAISED" layoutX="1101.0" layoutY="44.0" onAction="#goEmergency" prefHeight="35.0" prefWidth="85.0" styleClass="emergency" stylesheets="@../style.css" text="Emergency" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Group layoutX="123.0" layoutY="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ImageView fx:id="bwh" fitHeight="128.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Brigham_and_Womens_Hospital_logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#goHome" prefHeight="128.0" prefWidth="112.0" styleClass="homeButton" stylesheets="@../style.css" />
+         </children>
+      </Group>
+        <Label fx:id="timerLabel" layoutX="1147.0" layoutY="649.0" prefHeight="35.0" prefWidth="133.0" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+      <HBox fx:id="hbox1" layoutX="423.0" layoutY="35.0" prefHeight="63.0" prefWidth="434.0">
+         <children>
+              <Label fx:id="counselingRequest" text="Counseling Request" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                  <font>
+                      <Font size="48.0" />
+                  </font>
+              </Label>
+         </children></HBox>
+      <HBox fx:id="hbox2" layoutX="353.0" layoutY="611.0" prefHeight="55.0" prefWidth="574.0">
+         <children>
+            <JFXButton fx:id="backButton" buttonType="RAISED" onAction="#goServiceSystems" prefHeight="47.0" prefWidth="118.0" ripplerFill="WHITE" styleClass="footerButton" stylesheets="@../style.css" text="Back" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <HBox prefHeight="55.0" prefWidth="335.0" />
+            <JFXButton fx:id="submitButton" buttonType="RAISED" onAction="#goSubmit" prefHeight="47.0" prefWidth="118.0" ripplerFill="#6048d3" styleClass="footerButton" stylesheets="@../style.css" text="Submit" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <VBox fx:id="vbox" layoutX="182.0" layoutY="235.0" prefHeight="297.0" prefWidth="989.0">
+         <children>
+            <HBox prefHeight="95.0" prefWidth="1055.0">
+               <children>
+                  <VBox prefHeight="95.0" prefWidth="562.0">
+                     <children>
+                        <HBox prefHeight="56.0" prefWidth="537.0">
+                           <children>
+                              <HBox prefHeight="18.0" prefWidth="108.0">
+                                 <children>
+                                      <Text id="q1" fx:id="patientNameText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Name">
+                                          <font>
+                                              <Font size="18.0" />
+                                          </font>
+                                      </Text>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="56.0" prefWidth="38.0" />
+                              <HBox prefHeight="56.0" prefWidth="253.0">
+                                 <children>
+                                    <JFXTextField fx:id="patientName" focusColor="TRANSPARENT" onKeyReleased="#validateButton" onKeyTyped="#keyTyped" prefHeight="40.0" prefWidth="275.0" promptText="Enter name here" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="95.0" prefWidth="103.0">
+                     <children>
+                        <Text id="q1" fx:id="assignToText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign To" wrappingWidth="90.939453125">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="95.0" prefWidth="339.0">
+                     <children>
+                        <MenuButton fx:id="employeeChooser" mnemonicParsing="false" prefHeight="40.0" prefWidth="358.0" text="Choose employee" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="136.0" prefWidth="989.0">
+               <children>
+                  <HBox prefHeight="131.0" prefWidth="565.0">
+                     <children>
+                        <HBox prefHeight="85.0" prefWidth="150.0">
+                           <children>
+                              <Text id="q1" fx:id="locationText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="145.0" prefWidth="249.0">
+                           <children>
+                              <JFXTreeView fx:id="locationChooser" prefHeight="136.0" prefWidth="249.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="131.0" prefWidth="83.0">
+                     <children>
+                          <Text id="q3" fx:id="otherInformationText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Other Info" wrappingWidth="88.615234375">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="131.0" prefWidth="18.0" />
+                  <JFXTextField fx:id="otherInfo" alignment="TOP_LEFT" focusColor="TRANSPARENT" onKeyReleased="#validateButton" onKeyTyped="#keyTyped" prefHeight="131.0" prefWidth="334.0" promptText="Enter relevant info here (e.g. religion name, history, etc.)" styleClass="text-field" stylesheets="@../style.css" unFocusColor="TRANSPARENT">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="989.0" />
+            <HBox prefHeight="45.0" prefWidth="989.0">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="149.0">
+                     <children>
+                          <Text id="q2" fx:id="counTypeText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Counseling Type">
+                              <font>
+                                  <Font size="18.0" />
+                              </font>
+                          </Text>
+                     </children>
+                  </HBox>
+                  <MenuButton fx:id="counselingChooser" mnemonicParsing="false" prefHeight="40.0" prefWidth="248.0" text="Choose counseling type" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
